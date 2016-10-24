@@ -1,0 +1,7 @@
+Level Name: Tutorial-DialogueNone， 1.037412s. 
+Level Name: Tutorial-DialogueSquareOne， 0.4999471s. 
+Level Name: Tutorial-DialogueSquareTwo， 0.367857s. 
+Level Name: Tutorial-DialogueSquareThree， 0.4011229s. 
+Level Name: Tutorial-DialogueSquareFour， 0.366533s. 
+Level Name: Tutorial-DialogueFold， 0.4189661s. 
+Level Name: Tutorial-DialogueFolded， 3.77828s. 

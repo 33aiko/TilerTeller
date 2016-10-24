@@ -11,6 +11,9 @@ public class CameraControl : MonoBehaviour {
 	[SerializeField] Canvas dialogue;
 	[SerializeField] Animator  cubeAnim;
 	public Text text;
+	
+	public MetricManager metric;
+
 
 	public enum State
 	{
@@ -21,6 +24,7 @@ public class CameraControl : MonoBehaviour {
 		SquareFour = 4,
 		Fold = 5,
 		Folded = 6,
+		Cube = 7,
 	}
 	private State m_state = State.None;
 	public State state
@@ -47,15 +51,27 @@ public class CameraControl : MonoBehaviour {
 
 			if (value == State.Folded) 
 			{
-				Debug.Log ("S1");
 				if (cubeAnim != null) {
 					if (cubeAnim.GetCurrentAnimatorStateInfo (0).IsName ("Default")) {
-						Debug.Log ("S2");
 						cubeAnim.SetTrigger ("Start");
 					}
 					
 				}
 			}
+
+			if (value == State.Cube) 
+			{
+					for (int i = 0; i < squares.Length; i++) {
+						squares [i].GetComponent<SpriteRenderer> ().DOFade (0, 0.5f);
+					}
+					GameObject[] dialogues = GameObject.FindGameObjectsWithTag ("UI");
+					foreach (GameObject dialogue in dialogues) {
+						dialogue.GetComponent<RectTransform> ().DOScale (0, 0.5f);
+					}
+
+				cube.SetActive (true);
+			}
+
 
 
 			nextIcon.DOFade (0, 0);
@@ -77,8 +93,11 @@ public class CameraControl : MonoBehaviour {
 	private Camera m_camera;
 	private float defaultFOV;
 	private Vector3 defaultPos;
-	private GameObject continueBtn;
+	private GameObject cube;
 	private Image nextIcon;
+	private float last_start_time;
+	private AudioSource[] audio;
+
 
 
 	[SerializeField] GameObject[] squares;
@@ -92,8 +111,10 @@ public class CameraControl : MonoBehaviour {
 		if (m_camera != null)
 			defaultFOV = m_camera.fieldOfView;
 		defaultPos = transform.position;
-		continueBtn = GameObject.Find ("continue");
-		continueBtn.SetActive(false);
+		cube = GameObject.Find ("CUBE");
+		cube.SetActive (false);
+		audio = gameObject.GetComponents<AudioSource> ();
+
 		nextIcon = GameObject.Find ("next").GetComponent<Image>();
 		nextIcon.DOFade (0, 0);
 	}
@@ -108,15 +129,27 @@ public class CameraControl : MonoBehaviour {
 			dialogue.GetComponent<RectTransform> ().DOScale (1, 0.5f).SetDelay(1f);
 		}
 		nextIcon.DOFade (1, 0.5f).SetDelay(2);
+		last_start_time = Time.time;
 	}
 
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0)) {
+		Debug.Log (((int)m_state));
+		if (Input.GetMouseButtonDown(0) ) {
+			if (((int)m_state) < 5) {
+				audio [0].Play ();
+			}
+			if (((int)m_state) > 4 && ((int)m_state) < 7) {
+				audio [1].Play ();
+			}
+			string levelName = "Tutorial-Dialogue" + state;
+			metric.AddToLevelAndTimeMetric (levelName, (Time.time - last_start_time));
+			last_start_time = Time.time;
 			state++;
+			
 		}
-		if (cubeAnim.GetCurrentAnimatorStateInfo (0).IsName ("Finished")) {
-			continueBtn.SetActive (true);
-		}
+//		if (cubeAnim.GetCurrentAnimatorStateInfo (0).IsName ("Finished")) {
+//			continueBtn.SetActive (true);
+//		}
 	}
 }

@@ -36,7 +36,7 @@ public class StarLighter : MonoBehaviour {
 			for (int i = 1; i < num+1; i++) {
 				if (fireflys [i] != null) {
 					SpriteRenderer myfirefly = (SpriteRenderer)fireflys [i];
-					myfirefly.DOFade (1, 1);
+					myfirefly.DOFade (1, 1).SetDelay(2.2f);
 				}
 			}
 
@@ -44,6 +44,7 @@ public class StarLighter : MonoBehaviour {
 				switch (starNum) {
 				case 1:
 					mystar.GetComponent<SpriteRenderer> ().sprite = dictSprites ["S2_P3_star1"];
+					mystar.GetComponent<SpriteRenderer> ().DOFade (1, 1).SetDelay(2.2f);
 					break;
 				case 2:
 					mystar.GetComponent<SpriteRenderer> ().sprite = dictSprites ["S2_P3_star2"];
@@ -63,8 +64,9 @@ public class StarLighter : MonoBehaviour {
 	public ArduinoManager arduino;
 	public GameObject[] stars;
 	private  int[] buttonCounter = { 0, 0, 0, 0 };
+	private int[] lastButtonCounter = { 0, 0, 0, 0 };
 	private Star[] mystars = new Star[4];
-
+	public Animator Eggy;
 
 
 	void Awake(){
@@ -93,6 +95,7 @@ public class StarLighter : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			
 			buttonCounter [0]++;
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha2)) {
@@ -109,7 +112,14 @@ public class StarLighter : MonoBehaviour {
 			buttonCounter = arduino.getButtonCounter ();
 		}
 
-
+		for (int i = 0; i < 4; i++) {
+			if (buttonCounter [i] != lastButtonCounter [i]) {
+				Debug.Log ("hello!");
+				Eggy.SetTrigger ("release");
+				lastButtonCounter [i] = buttonCounter [i];
+				break;
+			}
+		}
 
 
 		for (int i = 0; i < 4; i++) {
@@ -119,4 +129,5 @@ public class StarLighter : MonoBehaviour {
 		}
 		Debug.Log(buttonCounter[0]+","+buttonCounter[1]+","+buttonCounter[2]+","+buttonCounter[3]);
 	}
+
 }

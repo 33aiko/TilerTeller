@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
+//using Giverspace;
 
 
 public class pageManager : MonoBehaviour {
@@ -10,6 +12,7 @@ public class pageManager : MonoBehaviour {
 	public GameObject hintPage;
 	public ArduinoManager arduino;
 	public Animator hintDoor;
+//	public MetricManager metric;
 
 
 	private int bookLength;  //total number of pages
@@ -29,9 +32,18 @@ public class pageManager : MonoBehaviour {
 
 	private AudioSource[] hintSound;
 
+	private float last_start_time;
+
 
 	void Start () {
 
+//		DateTime departure = new DateTime(2010, 6, 12, 18, 32, 0);
+//		DateTime arrival = new DateTime(2010, 6, 13, 22, 47, 0);
+//		TimeSpan travelTime = arrival - departure;  
+//		Debug.Log("travelTime: " + travelTime );  
+
+//		metric.AddToLevelAndTimeMetric ("Level1", 1.0f);
+//		Log.Metrics.Message ("just a test!!!");
 		lastBtn = GameObject.Find("/Canvas/last");
 		nextBtn = GameObject.Find ("/Canvas/next");
 		
@@ -49,7 +61,7 @@ public class pageManager : MonoBehaviour {
 
 		hintSound = hintPage.GetComponents<AudioSource> ();
 
-
+		last_start_time = Time.time;
 
 	}
 
@@ -62,16 +74,13 @@ public class pageManager : MonoBehaviour {
 		if (arduino.isConnected) {
 			puzzleNum = arduino.getPuzzleNum ();
 		}
-//		Debug.Log ("puzzleNum:" + puzzleNum);
+
 
 
 		/* waiting for players to solve puzzles */
 		if (isWaiting) {
 			/* Disabled buttons */
 			nextBtn.SetActive (false);
-
-//			Debug.Log (startAnim);
-
 
 			if (puzzleNum != lastPuzzleNum && puzzleNum != 0) {
 				Debug.Log ("Open");
@@ -103,6 +112,13 @@ public class pageManager : MonoBehaviour {
 					startAnim = false;
 					gotoPage (puzzleNum);
 					hintDoor.SetTrigger ("Close");
+
+					string levelName = "Story1-Puzzle-Page" + currentPage;
+					if (GameObject.Find ("MetricManager") != null) {
+						MetricManager.Instance.AddToLevelAndTimeMetric (levelName, (Time.time - last_start_time));
+					}
+//					metric.AddToLevelAndTimeMetric (levelName, (Time.time - last_start_time));
+					last_start_time = Time.time;
 				}
 			}
 
@@ -131,6 +147,14 @@ public class pageManager : MonoBehaviour {
 	/* When NextPage button is clicked */
 	public void turnNextPage(){
 
+		gameObject.GetComponent<AudioSource> ().Play ();
+
+		string levelName = "Story1-Page" + currentPage;
+		if (GameObject.Find ("MetricManager") != null) {
+			MetricManager.Instance.AddToLevelAndTimeMetric (levelName, (Time.time - last_start_time));
+		}
+//		metric.AddToLevelAndTimeMetric (levelName, (Time.time - last_start_time));
+
 		if (pageCount == bookLength - 2) {
 			currentPage = bookLength - 1;
 			pageRead [bookLength - 1] = currentPage;
@@ -147,11 +171,14 @@ public class pageManager : MonoBehaviour {
 		else {
 			showHintPage ();
 		}
+
 		pageCount++;
 		
 	}
 
 	public void turnLastPage(){
+		gameObject.GetComponent<AudioSource> ().Play ();
+
 		if (currentPage == 0) {
 			return;
 		} else {
@@ -160,9 +187,15 @@ public class pageManager : MonoBehaviour {
 			hideHintPage ();
 			isWaiting = false;
 		}
+		if (GameObject.Find ("MetricManager") != null) {
+			MetricManager.Instance.AddToLevelAndTimeMetric ("Go back to last Page!", 0);
+		}
+//		metric.AddToLevelAndTimeMetric ("Go back to last Page!", 0);
+		last_start_time = Time.time;
 	}
 
 	void showHintPage(){
+		
 		if (hintPage != null) {
 			hintPage.SetActive (true);
 			hintSound [1].Play ();
@@ -170,6 +203,7 @@ public class pageManager : MonoBehaviour {
 			isWaiting = true;
 		}
 
+		last_start_time = Time.time;
 	}
 
 	void hideHintPage(){
