@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	588776017	Stop_BirdCall			\Default Work Unit\Stop_BirdCall	
+	764474359	Start_BirdCall			\Default Work Unit\Start_BirdCall	
+	2906149545	Start_TitleMusic			\Default Work Unit\Start_TitleMusic	
+	4051332235	ButtonClick			\Default Work Unit\ButtonClick	
+	4105595511	Stop_TitleMusic			\Default Work Unit\Stop_TitleMusic	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	646284223	Title_bgm	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\iOS\SFX\Title_bgm_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Music\TitleMusic\Title_bgm\Title_bgm		31819860
+	725276048	ButtonClick	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\iOS\SFX\ButtonClick_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\ButtonClick		13464
+	746546074	Bird	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\iOS\SFX\Bird_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bird		28095040
+
