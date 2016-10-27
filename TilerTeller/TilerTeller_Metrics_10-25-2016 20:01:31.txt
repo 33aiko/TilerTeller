@@ -1,0 +1,13 @@
+Level Name: Tutorial-DialogueNone， 29.5335s. 
+Level Name: Tutorial-DialogueSquareOne， 1.475945s. 
+Level Name: Tutorial-DialogueSquareTwo， 1.249329s. 
+Level Name: Tutorial-DialogueSquareThree， 3.734291s. 
+Level Name: Tutorial-DialogueSquareFour， 1.604507s. 
+Level Name: Tutorial-DialogueFold， 1.737858s. 
+Level Name: Tutorial-DialogueFolded， 4.665741s. 
+Level Name: Tutorial-DialogueCube， 49.42696s. 
+Level Name: Story1-Page0， 24.84956s. 
+Level Name: Story1-Puzzle-Page3， 100.4563s. 
+Level Name: Story1-Page3， 23.00912s. 
+Level Name: Go back to last Page!， 0s. 
+Level Name: Go back to last Page!， 0s. 
