@@ -37,13 +37,6 @@ public class pageManager : MonoBehaviour {
 
 	void Start () {
 
-//		DateTime departure = new DateTime(2010, 6, 12, 18, 32, 0);
-//		DateTime arrival = new DateTime(2010, 6, 13, 22, 47, 0);
-//		TimeSpan travelTime = arrival - departure;  
-//		Debug.Log("travelTime: " + travelTime );  
-
-//		metric.AddToLevelAndTimeMetric ("Level1", 1.0f);
-//		Log.Metrics.Message ("just a test!!!");
 		lastBtn = GameObject.Find("/Canvas/last");
 		nextBtn = GameObject.Find ("/Canvas/next");
 		
