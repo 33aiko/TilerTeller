@@ -43,14 +43,17 @@ public class BunnyManager : MonoBehaviour {
 	
 		if (bunnyType < 1) {
 			GameObject brownBunnyClone = (GameObject)Instantiate (brownBunny, brownBunny.transform.position, brownBunny.transform.rotation);
+			brownBunnyClone.transform.parent = gameObject.transform;
 			brownBunnyClone.GetComponent<BunnyMov> ().duration = duration;
 		}
 		if (bunnyType >= 1 && bunnyType < 3) {
 			GameObject whiteBunnyClone = (GameObject)Instantiate (whiteBunny, whiteBunny.transform.position, whiteBunny.transform.rotation);
+			whiteBunnyClone.transform.parent = gameObject.transform;
 			whiteBunnyClone.GetComponent<BunnyMov> ().duration = duration;
 		}
 		if (bunnyType >= 3) {
 			GameObject whiteBunnyRedClone = (GameObject)Instantiate (whiteBunnyRed, whiteBunnyRed.transform.position, whiteBunnyRed.transform.rotation);
+			whiteBunnyRedClone.transform.parent = gameObject.transform;
 			whiteBunnyRedClone.GetComponent<BunnyMov> ().duration = duration;
 		}
 

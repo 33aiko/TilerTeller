@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using DG.Tweening;
 
 
 public class S2PageManager : MonoBehaviour {
 
 	public GameObject[] pages;
+	public notebookGenerator notebook;
 
 	private int currentPage;
 	private int bookLength;
@@ -13,6 +15,7 @@ public class S2PageManager : MonoBehaviour {
 	private GameObject lastBtn;
 	private GameObject nextBtn;
 
+	private bool isCreated = false;
 
 
 
@@ -51,6 +54,14 @@ public class S2PageManager : MonoBehaviour {
 		if (currentPage >= 1) {
 			nextBtn.SetActive (false);
 		}
+
+		if (currentPage == 4 && !isCreated) {
+			notebook.GetComponent<CanvasGroup> ().DOFade (1, 0);
+			notebook.createPandas ();
+			isCreated = true;
+		}
+
+
 	}
 
 
@@ -58,11 +69,24 @@ public class S2PageManager : MonoBehaviour {
 		gameObject.GetComponent<AudioSource> ().Play ();
 
 		currentPage++;
+
 	}
 
 	public void turnLastPage(){
+		if (currentPage == 4 && isCreated) {
+			notebook.destroyPandas ();
+			isCreated = false;
+		}
 		gameObject.GetComponent<AudioSource> ().Play ();
-		currentPage--;
+		if (currentPage > 1) {
+			currentPage = 1;
+		} else {
+			currentPage--;
+		}
+
 	}
 
+	public void showJobDetail(int jobNum){
+		currentPage = jobNum;
+	}
 }
