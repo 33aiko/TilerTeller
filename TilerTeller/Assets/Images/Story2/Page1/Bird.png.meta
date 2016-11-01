@@ -1,16 +1,15 @@
 fileFormatVersion: 2
-guid: 288320a65c0654210886f6db393274d9
-timeCreated: 1477984615
+guid: 047f5ba85441a4543a2eae1df0f790f0
+timeCreated: 1477983628
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Story2_PageAssets_0
-    21300002: Story2_PageAssets_1
-    21300004: Story2_PageAssets_2
-    21300006: Story2_PageAssets_3
-    21300008: Story2_PageAssets_4
-    21300010: Story2_PageAssets_5
-    21300012: Story2_PageAssets_6
+    21300000: Bird_0
+    21300002: Bird_1
+    21300004: Bird_2
+    21300006: Bird_3
+    21300008: Bird_4
+    21300010: Bird_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,93 +59,80 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Story2_PageAssets_0
+      name: Bird_0
       rect:
         serializedVersion: 2
-        x: 300
-        y: 929
-        width: 573
-        height: 312
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Story2_PageAssets_1
-      rect:
-        serializedVersion: 2
-        x: 886
-        y: 715
-        width: 725
-        height: 560
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Story2_PageAssets_2
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 545
-        width: 363
-        height: 359
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Story2_PageAssets_3
-      rect:
-        serializedVersion: 2
-        x: 1234
-        y: 582
-        width: 36
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Story2_PageAssets_4
-      rect:
-        serializedVersion: 2
-        x: 1337
-        y: 563
+        x: 28
+        y: 108
         width: 110
         height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Story2_PageAssets_5
+      name: Bird_1
       rect:
         serializedVersion: 2
-        x: 1497
-        y: 571
-        width: 122
+        x: 180
+        y: 108
+        width: 110
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 108
+        width: 110
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 121
         height: 92
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Story2_PageAssets_6
+      name: Bird_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 18
-        width: 1633
-        height: 491
+        x: 168
+        y: 7
+        width: 122
+        height: 88
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 5
+        width: 122
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
