@@ -19,6 +19,6 @@ public class playSound : MonoBehaviour {
 			audio.Play ();
 		}
 		*/
-		AkSoundEngine.PostEvent (wwiseEvent,this.gameObject);
+//		AkSoundEngine.PostEvent (wwiseEvent,this.gameObject);
 	}
 }

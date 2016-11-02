@@ -8,6 +8,7 @@ public class S2PageManager : MonoBehaviour {
 
 	public GameObject[] pages;
 	public notebookGenerator notebook;
+	public bleManager ble;
 
 	private int currentPage;
 	private int bookLength;
@@ -60,6 +61,8 @@ public class S2PageManager : MonoBehaviour {
 			notebook.createPandas ();
 			isCreated = true;
 		}
+
+		ble.sendBluetooth (currentPage.ToString ());
 
 
 	}

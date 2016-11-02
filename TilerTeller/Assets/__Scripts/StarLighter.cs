@@ -61,7 +61,7 @@ public class StarLighter : MonoBehaviour {
 
 	}
 
-	public ArduinoManager arduino;
+	public dataManager datamanager;
 	public GameObject[] stars;
 	private  int[] buttonCounter = { 0, 0, 0, 0 };
 	private int[] lastButtonCounter = { 0, 0, 0, 0 };
@@ -108,8 +108,11 @@ public class StarLighter : MonoBehaviour {
 			buttonCounter [3]++;
 		}
 
-		if (arduino != null && arduino.isConnected == true) {
-			buttonCounter = arduino.getButtonCounter ();
+//		if (arduino != null && arduino.isConnected == true) {
+//			buttonCounter = arduino.getButtonCounter ();
+//		}
+		if (datamanager != null) {
+			buttonCounter = datamanager.getButtonCounter();
 		}
 
 		for (int i = 0; i < 4; i++) {
