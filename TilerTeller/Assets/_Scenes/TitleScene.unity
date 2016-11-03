@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a5543ca9fb542fb87a6b2800fd55a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wwiseEvent: Start_TitleMusic
+  wwiseEvent: EV_TitleMusic_Start
   gameObj: {fileID: 1416320879}
 --- !u!114 &1603208757
 MonoBehaviour:

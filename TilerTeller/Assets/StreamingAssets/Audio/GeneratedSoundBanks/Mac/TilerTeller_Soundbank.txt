@@ -1,12 +1,39 @@
 Event	ID	Name			Wwise Object Path	Notes
-	588776017	Stop_BirdCall			\Default Work Unit\Stop_BirdCall	
-	764474359	Start_BirdCall			\Default Work Unit\Start_BirdCall	
-	2906149545	Start_TitleMusic			\Default Work Unit\Start_TitleMusic	
-	4051332235	ButtonClick			\Default Work Unit\ButtonClick	
-	4105595511	Stop_TitleMusic			\Default Work Unit\Stop_TitleMusic	
+	13799808	EV_TutorialWhoof			\Default Work Unit\Sound FX\One Shot FX\EV_TutorialWhoof	
+	37956317	EV_TitleMusic_Start			\Default Work Unit\Music\EV_TitleMusic_Start	
+	224980415	EV_AusWithKoala_Start			\Default Work Unit\Sound FX\Ambience FX\EV_AusWithKoala_Start	
+	330781360	EV_Story1Opening_Start			\Default Work Unit\Music\EV_Story1Opening_Start	
+	711855103	EV_Bird_Start			\Default Work Unit\Sound FX\Ambience FX\EV_Bird_Start	
+	737914591	EV_TitleMusic_Stop			\Default Work Unit\Music\EV_TitleMusic_Stop	
+	771981663	EV_Ice_Stop			\Default Work Unit\Sound FX\Ambience FX\EV_Ice_Stop	
+	789965065	EV_ButtonClick			\Default Work Unit\Sound FX\One Shot FX\EV_ButtonClick	
+	894395569	EV_SaharaWater_Stop			\Default Work Unit\Sound FX\Ambience FX\EV_SaharaWater_Stop	
+	2047764837	EV_TutorialMusic_Stop			\Default Work Unit\Music\EV_TutorialMusic_Stop	
+	2478077599	EV_TutorialMusic_Start			\Default Work Unit\Music\EV_TutorialMusic_Start	
+	2674598684	EV_Story1Opening_Stop			\Default Work Unit\Music\EV_Story1Opening_Stop	
+	2755600961	EV_SelectionBG_Stop			\Default Work Unit\Music\EV_SelectionBG_Stop	
+	3029568093	EV_Ice_Start			\Default Work Unit\Sound FX\Ambience FX\EV_Ice_Start	
+	3068961139	EV_SaharaWater_Start			\Default Work Unit\Sound FX\Ambience FX\EV_SaharaWater_Start	
+	3079586769	EV_StarryNight_Stop			\Default Work Unit\Music\EV_StarryNight_Stop	
+	3110463045	EV_Bird_Stop			\Default Work Unit\Sound FX\Ambience FX\EV_Bird_Stop	
+	3648740899	EV_OpenYardDoor			\Default Work Unit\Sound FX\One Shot FX\EV_OpenYardDoor	
+	3669664479	EV_PageTurn			\Default Work Unit\Sound FX\One Shot FX\EV_PageTurn	
+	3769589779	EV_StarryNight_Start			\Default Work Unit\Music\EV_StarryNight_Start	
+	3931376323	EV_SelectionBG_Start			\Default Work Unit\Music\EV_SelectionBG_Start	
+	3932545541	EV_AusWithKoala_Stop			\Default Work Unit\Sound FX\Ambience FX\EV_AusWithKoala_Stop	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	646284223	Title_bgm	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Title_bgm_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Music\TitleMusic\Title_bgm\Title_bgm		31819860
-	725276048	ButtonClick	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\ButtonClick_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\ButtonClick		13464
-	746546074	Bird	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Bird_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bird		28095040
+	83705368	SFX_TutorialWhoof	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Tutorialwhoof_BD8333EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\One-Shot FX\SFX_TutorialWhoof		32952
+	160288976	AMB_AusWithKoala	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Story1_AusWithKoala_40F9DE44.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AMB_AusWithKoala		2083519
+	183291983	StarryNightv2	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\StarryNightv2_019844EE.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MX_StarryNight_Container\MX_StarryNightv2\StarryNightv2		1178872
+	269145492	SFX_OpenYardDoor	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\OpenYardDoor_BD8333EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\One-Shot FX\SFX_OpenYardDoor		474028
+	308199626	AMB_Ice	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Story1_Ice_40F9DE44.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AMB_Ice		1738632
+	499030256	SFX_PageTurn	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\PageTurn_BD8333EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\One-Shot FX\SFX_PageTurn		76152
+	646284223	Title_bgm	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Title_bgm_019844EE.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MX_TitleMusic_Container\MX_TitleMusic\Title_bgm		2851552
+	725276048	SFX_ButtonClick	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\ButtonClick_BD8333EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\One-Shot FX\SFX_ButtonClick		9784
+	731264569	SelectionBG	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\SelectionBG_019844EE.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MX_SelectionBG_Container\MX_SelectionBG\SelectionBG		2175779
+	746546074	AMB_Bird	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Bird_019844EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AMB_Bird		2523066
+	761245173	Story1_Start	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Story1_Start_019844EE.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MX_Story1Opening_Container\MX_Story1Opening\Story1_Start		3337702
+	804311581	AMB_SaharaWater	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\Story1_SaharaWater_40F9DE44.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AMB_SaharaWater		1787199
+	874789274	TutorialBG2	Y:\Documents\TilerTeller\TilerTeller\TilerTellerWwise\.cache\Mac\SFX\TutorialBG2_019844EE.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MX_TutorialBG2_Container\MX_TutorialBG2\TutorialBG2		1013523
 

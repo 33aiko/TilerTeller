@@ -16,24 +16,81 @@
 			<ShortName>TilerTeller_Soundbank</ShortName>
 			<Path>TilerTeller_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4051332235" Name="ButtonClick" ObjectPath="\Events\Default Work Unit\ButtonClick"/>
-				<Event Id="764474359" Name="Start_BirdCall" ObjectPath="\Events\Default Work Unit\Start_BirdCall"/>
-				<Event Id="2906149545" Name="Start_TitleMusic" ObjectPath="\Events\Default Work Unit\Start_TitleMusic"/>
-				<Event Id="588776017" Name="Stop_BirdCall" ObjectPath="\Events\Default Work Unit\Stop_BirdCall"/>
-				<Event Id="4105595511" Name="Stop_TitleMusic" ObjectPath="\Events\Default Work Unit\Stop_TitleMusic"/>
+				<Event Id="224980415" Name="EV_AusWithKoala_Start" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_AusWithKoala_Start"/>
+				<Event Id="3932545541" Name="EV_AusWithKoala_Stop" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_AusWithKoala_Stop"/>
+				<Event Id="711855103" Name="EV_Bird_Start" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_Bird_Start"/>
+				<Event Id="3110463045" Name="EV_Bird_Stop" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_Bird_Stop"/>
+				<Event Id="789965065" Name="EV_ButtonClick" ObjectPath="\Events\Default Work Unit\Sound FX\One Shot FX\EV_ButtonClick"/>
+				<Event Id="3029568093" Name="EV_Ice_Start" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_Ice_Start"/>
+				<Event Id="771981663" Name="EV_Ice_Stop" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_Ice_Stop"/>
+				<Event Id="3648740899" Name="EV_OpenYardDoor" ObjectPath="\Events\Default Work Unit\Sound FX\One Shot FX\EV_OpenYardDoor"/>
+				<Event Id="3669664479" Name="EV_PageTurn" ObjectPath="\Events\Default Work Unit\Sound FX\One Shot FX\EV_PageTurn"/>
+				<Event Id="3068961139" Name="EV_SaharaWater_Start" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_SaharaWater_Start"/>
+				<Event Id="894395569" Name="EV_SaharaWater_Stop" ObjectPath="\Events\Default Work Unit\Sound FX\Ambience FX\EV_SaharaWater_Stop"/>
+				<Event Id="3931376323" Name="EV_SelectionBG_Start" ObjectPath="\Events\Default Work Unit\Music\EV_SelectionBG_Start"/>
+				<Event Id="2755600961" Name="EV_SelectionBG_Stop" ObjectPath="\Events\Default Work Unit\Music\EV_SelectionBG_Stop"/>
+				<Event Id="3769589779" Name="EV_StarryNight_Start" ObjectPath="\Events\Default Work Unit\Music\EV_StarryNight_Start"/>
+				<Event Id="3079586769" Name="EV_StarryNight_Stop" ObjectPath="\Events\Default Work Unit\Music\EV_StarryNight_Stop"/>
+				<Event Id="330781360" Name="EV_Story1Opening_Start" ObjectPath="\Events\Default Work Unit\Music\EV_Story1Opening_Start"/>
+				<Event Id="2674598684" Name="EV_Story1Opening_Stop" ObjectPath="\Events\Default Work Unit\Music\EV_Story1Opening_Stop"/>
+				<Event Id="37956317" Name="EV_TitleMusic_Start" ObjectPath="\Events\Default Work Unit\Music\EV_TitleMusic_Start"/>
+				<Event Id="737914591" Name="EV_TitleMusic_Stop" ObjectPath="\Events\Default Work Unit\Music\EV_TitleMusic_Stop"/>
+				<Event Id="2478077599" Name="EV_TutorialMusic_Start" ObjectPath="\Events\Default Work Unit\Music\EV_TutorialMusic_Start"/>
+				<Event Id="2047764837" Name="EV_TutorialMusic_Stop" ObjectPath="\Events\Default Work Unit\Music\EV_TutorialMusic_Stop"/>
+				<Event Id="13799808" Name="EV_TutorialWhoof" ObjectPath="\Events\Default Work Unit\Sound FX\One Shot FX\EV_TutorialWhoof"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="83705368" Language="SFX">
+					<ShortName>Tutorialwhoof.wav</ShortName>
+					<Path>SFX/Tutorialwhoof_BD8333EB.wem</Path>
+				</File>
+				<File Id="160288976" Language="SFX">
+					<ShortName>Story1_AusWithKoala.wav</ShortName>
+					<Path>SFX/Story1_AusWithKoala_40F9DE44.wem</Path>
+				</File>
+				<File Id="183291983" Language="SFX">
+					<ShortName>StarryNightv2.wav</ShortName>
+					<Path>SFX/StarryNightv2_019844EE.wem</Path>
+				</File>
+				<File Id="269145492" Language="SFX">
+					<ShortName>OpenYardDoor.wav</ShortName>
+					<Path>SFX/OpenYardDoor_BD8333EB.wem</Path>
+				</File>
+				<File Id="308199626" Language="SFX">
+					<ShortName>Story1_Ice.wav</ShortName>
+					<Path>SFX/Story1_Ice_40F9DE44.wem</Path>
+				</File>
+				<File Id="499030256" Language="SFX">
+					<ShortName>PageTurn.wav</ShortName>
+					<Path>SFX/PageTurn_BD8333EB.wem</Path>
+				</File>
 				<File Id="646284223" Language="SFX">
 					<ShortName>Title_bgm.wav</ShortName>
-					<Path>SFX/Title_bgm_4B8CC0C5.wem</Path>
+					<Path>SFX/Title_bgm_019844EE.wem</Path>
 				</File>
 				<File Id="725276048" Language="SFX">
 					<ShortName>ButtonClick.wav</ShortName>
-					<Path>SFX/ButtonClick_9E69E797.wem</Path>
+					<Path>SFX/ButtonClick_BD8333EB.wem</Path>
+				</File>
+				<File Id="731264569" Language="SFX">
+					<ShortName>SelectionBG.wav</ShortName>
+					<Path>SFX/SelectionBG_019844EE.wem</Path>
 				</File>
 				<File Id="746546074" Language="SFX">
 					<ShortName>Bird.wav</ShortName>
-					<Path>SFX/Bird_4B8CC0C5.wem</Path>
+					<Path>SFX/Bird_019844EE.wem</Path>
+				</File>
+				<File Id="761245173" Language="SFX">
+					<ShortName>Story1_Start.wav</ShortName>
+					<Path>SFX/Story1_Start_019844EE.wem</Path>
+				</File>
+				<File Id="804311581" Language="SFX">
+					<ShortName>Story1_SaharaWater.wav</ShortName>
+					<Path>SFX/Story1_SaharaWater_40F9DE44.wem</Path>
+				</File>
+				<File Id="874789274" Language="SFX">
+					<ShortName>TutorialBG2.wav</ShortName>
+					<Path>SFX/TutorialBG2_019844EE.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

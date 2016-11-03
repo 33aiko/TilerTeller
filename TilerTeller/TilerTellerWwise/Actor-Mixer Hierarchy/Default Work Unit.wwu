@@ -3,9 +3,107 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{A75CB8F1-4E9F-4C3A-9CBA-BDABA0611ED8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="SFX" ID="{9E62B8DF-B1BA-4A96-BC9C-19AD3785A0B0}" ShortID="711637639">
+				<Folder Name="One-Shot FX" ID="{9E62B8DF-B1BA-4A96-BC9C-19AD3785A0B0}" ShortID="711637639">
 					<ChildrenList>
-						<Sound Name="Bird" ID="{000CB2A6-F7A0-4849-A36C-0231FFA8C7BE}" ShortID="181352178" Type="SoundFX">
+						<Sound Name="SFX_ButtonClick" ID="{804318D2-BE05-407E-BD2C-1D9CF1455D79}" ShortID="19096876" Type="SoundFX">
+							<PropertyList>
+								<Property Name="EnablePanner" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="PCM Auto Detect High" ID="{103058FA-B09E-42AF-A6BA-B711CD85E365}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ButtonClick" ID="{577E547B-6899-4817-9066-CCCF352A81FE}" ShortID="725276048">
+									<Language>SFX</Language>
+									<AudioFile>ButtonClick.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{EEA37888-0319-4B9A-88AB-F5B9057E9186}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="48.8977955911824"/>
+										<Property Name="PanY" Type="Real64" Value="-0.849256900212302"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="ButtonClick" ID="{577E547B-6899-4817-9066-CCCF352A81FE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_OpenYardDoor" ID="{E1C50873-0D7A-49D7-9714-FACBC8930A1B}" ShortID="487932967" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="PCM Auto Detect High" ID="{103058FA-B09E-42AF-A6BA-B711CD85E365}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OpenYardDoor" ID="{60F3E516-E0A5-4A0A-8C99-180A3BAFFABB}" ShortID="269145492">
+									<Language>SFX</Language>
+									<AudioFile>OpenYardDoor.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="OpenYardDoor" ID="{60F3E516-E0A5-4A0A-8C99-180A3BAFFABB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_PageTurn" ID="{6C3378D3-07AD-451B-BDCC-2CD28D7AA68D}" ShortID="366087196" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="PCM Auto Detect High" ID="{103058FA-B09E-42AF-A6BA-B711CD85E365}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PageTurn" ID="{0C7F53DD-256C-4E3F-AE7E-241B068A3EF4}" ShortID="499030256">
+									<Language>SFX</Language>
+									<AudioFile>PageTurn.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PageTurn" ID="{0C7F53DD-256C-4E3F-AE7E-241B068A3EF4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_TutorialWhoof" ID="{AC11432E-557D-4CF1-B3F3-7BA585FB5538}" ShortID="232174037" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="PCM Auto Detect High" ID="{103058FA-B09E-42AF-A6BA-B711CD85E365}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Tutorialwhoof" ID="{BD117BE8-27A3-4955-9CFA-D57ADD4053EA}" ShortID="83705368">
+									<Language>SFX</Language>
+									<AudioFile>Tutorialwhoof.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tutorialwhoof" ID="{BD117BE8-27A3-4955-9CFA-D57ADD4053EA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{4D881E39-CD7D-4B9A-BE22-C210FA8DB2E2}" ShortID="937366827">
+					<ChildrenList>
+						<Sound Name="AMB_Bird" ID="{000CB2A6-F7A0-4849-A36C-0231FFA8C7BE}" ShortID="181352178" Type="SoundFX">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
@@ -13,10 +111,15 @@
 										<Value>56</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{15843B5B-4601-4B3D-A35E-D408BFF5D0AA}"/>
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
@@ -32,23 +135,82 @@
 								<ActiveSource Name="Bird" ID="{A3E5B3BD-8B69-4444-B7BA-744F9CA003C8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ButtonClick" ID="{804318D2-BE05-407E-BD2C-1D9CF1455D79}" ShortID="19096876" Type="SoundFX">
+						<Sound Name="AMB_Ice" ID="{3C2360E0-D17A-4940-8A8A-75735EC45B1F}" ShortID="173579712" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{15843B5B-4601-4B3D-A35E-D408BFF5D0AA}"/>
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ButtonClick" ID="{577E547B-6899-4817-9066-CCCF352A81FE}" ShortID="725276048">
+								<AudioFileSource Name="Story1_Ice" ID="{93B15E0F-6FDA-46F2-87E5-72A6F5F5F367}" ShortID="308199626">
 									<Language>SFX</Language>
-									<AudioFile>ButtonClick.wav</AudioFile>
+									<AudioFile>Story1_Ice.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ButtonClick" ID="{577E547B-6899-4817-9066-CCCF352A81FE}" Platform="Linked"/>
+								<ActiveSource Name="Story1_Ice" ID="{93B15E0F-6FDA-46F2-87E5-72A6F5F5F367}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AMB_AusWithKoala" ID="{1A4C173E-D7BB-4E14-9A8C-7252761DC6C4}" ShortID="655231305" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Story1_AusWithKoala" ID="{FC10FB72-D1C5-43DA-A55D-CAED46ED0DA0}" ShortID="160288976">
+									<Language>SFX</Language>
+									<AudioFile>Story1_AusWithKoala.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Story1_AusWithKoala" ID="{FC10FB72-D1C5-43DA-A55D-CAED46ED0DA0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AMB_SaharaWater" ID="{1888EDBA-B45B-48D7-B595-B94F3349E967}" ShortID="555074966" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0D6E8AC3-2970-4CD4-9476-159A26C81C4F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Story1_SaharaWater" ID="{8570C13B-0D97-4600-966D-483E14831334}" ShortID="804311581">
+									<Language>SFX</Language>
+									<AudioFile>Story1_SaharaWater.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Story1_SaharaWater" ID="{8570C13B-0D97-4600-966D-483E14831334}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
